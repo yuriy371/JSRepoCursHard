@@ -1,10 +1,40 @@
-let num = 266219
-let numArr = num.toString().split('') // Преобразование числа в строку и разбиение на массив
-let numRes = numArr.reduce((res, item) => item * res) // Перемножение чисел массива с помошью метода reduce
+let lang = prompt("Выберите язык", "ru, en")
 
-console.log(numArr);
+/* if-else */
+if (lang === "ru") {
+    console.log("Понедельник,Вторник,Среда,Четверг,Пятница,Суббота,Воскресенье");
+} else if (lang === "en") {
+    console.log("Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday");
+}
+/* ------- */
 
-let numDeg = numRes ** 3
+console.log("End if-else ------------------------");
 
-console.log(numDeg);
-console.log(String(numDeg).slice(0, 2)); // Перевод числа в строку и получение двух первых цифр из строки
+/* switch-case */
+switch (lang) {
+    case "ru":
+        console.log("Понедельник,Вторник,Среда,Четверг,Пятница,Суббота,Воскресенье");
+        break;
+    case "en":
+        console.log("Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday");
+        break;
+}
+/* ------------*/
+
+console.log("End switch-case ------------------------");
+
+/* Mult-Arr */
+let arrDay = [
+    ["ru", ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье",]],
+    ["en", ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday",]]
+]
+
+res = (arrDay[0][0] == lang) ? console.log(arrDay[0][1]) : console.log(arrDay[1][1]);
+/* -------- */
+
+console.log("End Mult-Arr ------------------------");
+
+let namePerson = prompt("Введите имя");
+
+resPosition = (namePerson == "Артем") ? console.log("директор") : 
+(namePerson == "Александр") ? console.log("преподаватель") : console.log("студент");
