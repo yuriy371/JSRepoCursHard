@@ -2,9 +2,6 @@
 
 let week = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье",]
 let date = new Date().getUTCDay()
-let day = date
-
-console.log(day);
 
 /* --------------------------------- */
 week.forEach(function (item, i) {
